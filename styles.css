@@ -1,0 +1,490 @@
+/* _____________Colors_____________ */
+:root{
+    /* Primary */
+    --Ghost-white: hsl(230, 25%, 95%);
+    --Cyan: hsl(180, 66%, 49%);
+    --Dark-Violet: hsl(258, 27%, 26%);
+    
+    /* Secondary */
+    --Red: hsl(0, 87%, 67%);
+    
+    /* Neutral */
+    --Gray: hsl(0, 0%, 75%);
+    --Grayish-Violet: hsl(258, 7%, 63%);
+    --Very-Dark-Blue: hsl(255, 11%, 22%);
+    --Very-Dark-Violet: hsl(260, 8%, 14%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+/* _____________Styling_____________ */
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+
+
+/* ___________nav___________ */
+nav{
+    display: flex;
+    width: 100%;
+    padding: 1em 10%;
+    position: fixed;
+    z-index: 1;
+}
+
+.scrolling-active{
+    background: hsla(258, 27%, 26%, .95);
+}
+
+nav svg{
+    flex-shrink: 0;
+}
+nav > div{
+    display: flex;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.6em;
+    margin: auto 0 auto 2.5em;
+}
+
+nav li{
+    color: var(--Grayish-Violet);
+    cursor: pointer;
+}
+
+nav li:hover{
+    color: var(--Dark-Violet);
+}
+
+nav a{
+    color: var(--Grayish-Violet);
+    margin: auto 0 auto auto;
+    cursor: pointer;
+}
+
+nav button{
+    color: var(--white);
+    background: var(--Cyan);
+    cursor: pointer;
+    padding: .2em 1em;
+    border-radius: 1em;
+    margin: auto 0 auto 1em;
+}
+
+#menu, .hamburger, .close{
+    display: none;
+}
+
+.menu{
+    margin: auto 0 auto auto;
+}
+
+
+/* ___________main___________ */
+main{
+    padding: 2em 0 0;
+}
+
+/* _________hero_________ */
+.hero{
+    background: url(images/illustration-working.svg)
+                bottom 8em right
+                no-repeat;
+    background-size: 46%;
+    padding: 12em 10% 12em;
+    position: relative;
+}
+.hero > h1{
+    color: var(--Very-Dark-Violet);
+    font-size: 50px;
+    line-height: 1.1em;
+    width: 10em;
+}
+
+.hero > p{
+    color: var(--Grayish-Violet);
+    font-size: 20px;
+    width: 24em;
+}
+
+.hero > button{
+    background: var(--Cyan);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    padding: .4em 1.2em;
+    border-radius: 1.2em;
+    margin-top: 1.4em;
+}
+
+.linkbox{
+    background: url(images/bg-shorten-desktop.svg)
+                no-repeat,
+                var(--Dark-Violet);
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    padding: 2.5em 0;
+    border-radius: .8em;
+    position: absolute;
+    bottom: -4em;
+}
+
+.linkbox input{
+    width: 75%;
+    padding: .6em 0 .6em 1em;
+    border-radius: .5em;
+}
+
+.linkbox > button{
+    background: var(--Cyan);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    padding: .8em 1.6em;
+    border-radius: .5em;
+}
+
+
+
+/* _________statistics_________ */
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    margin-top: 2em;
+    position: relative;
+}
+
+.links > div{
+    background: var(--white);
+    justify-content: space-between;
+    padding: .6em 1em;
+    border-radius: .6em;
+}
+
+.links div{
+    display: flex;
+}
+
+.links p{
+    color: var(--Very-Dark-Violet);
+    margin: auto 0;
+}
+
+.newLink p{
+    color: var(--Grayish-Violet);
+}
+
+.newLink button{
+    background: var(--Cyan);
+    color: var(--white);
+    cursor: pointer;
+    padding: .6em 1.6em;
+    border-radius: .6em;
+    margin-left: 1em;
+}
+
+.newLink .copied{
+    background: var(--Dark-Violet);
+}
+
+.statistics{
+    background: var(--Ghost-white);
+    padding: 4em 10% 8em;
+}
+
+.statistics-header{
+    width: 30em;
+    margin: 6em auto 0;
+}
+
+.statistics h2{
+    text-align: center;
+    font-size: 32px;
+}
+
+.statistics-header > p{
+    color: var(--Grayish-Violet);
+    text-align: center;
+}
+
+.box-container{
+    height:    18em;
+    position: relative;
+}
+
+.boxes{
+    background: var(--white);
+    border-radius: .4em;
+    width: 32%;
+    padding: 2.5em 2em 2em;
+    position: absolute;
+}
+
+.box1{
+    top: 2em;
+}
+.box2{
+    top: 4em;
+    left: 50%;
+    transform: translate(-50%);
+}
+.box3{
+    top: 6em;
+    right: 0;
+}
+
+.boxes > div{
+    background: var(--Dark-Violet);
+    display: flex;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    position: absolute;
+    top: -2em;
+}
+
+.boxes img{
+    margin: auto;
+}
+
+.boxes h3{
+    color: var(--Very-Dark-Violet);
+    margin-bottom: .6em;
+}
+
+.boxes p{
+    color: var(--Grayish-Violet);
+}
+
+/* _________boost link_________ */
+.boostLink{
+    background: url(images/bg-boost-desktop.svg)
+                no-repeat,
+                var(--Dark-Violet);
+    background-size: cover;
+    text-align: center;
+    padding: 3em 0;
+}
+
+.boostLink h2{
+    color: var(--white);
+    font-size: 32px;
+    margin-bottom: .4em;
+}
+
+.boostLink button{
+    background: var(--Cyan);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    padding: .4em 1.4em;
+    border-radius: 1.2em;
+}
+
+
+/* ___________footer___________ */
+footer{
+    background: var(--Very-Dark-Violet);
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 10%;
+}
+
+footer path{
+    fill: var(--white);
+}
+
+footer h4{
+    color: var(--white);
+    margin-bottom: 1em;
+}
+
+footer li{
+    color: var(--Gray);
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.media{
+    display: flex;
+    gap: 1em;
+    margin-bottom: auto;
+}
+footer img{
+    width: 1.4em;
+    cursor: pointer;
+}
+
+
+
+@media(max-width: 1120px){
+    /* ___________nav___________ */
+    nav ul{
+        gap: .6em;
+        margin-left: 1.5em;
+    }
+    /* _________hero_________ */
+    .hero{
+        background-position: top 6em center;
+        background-size: 64vh;
+        text-align: center;
+        padding-top: 28em;
+    }
+    .hero h1{
+        font-size: 46px;
+        width: 100%;
+    }
+    .hero p{
+        width: 100%;
+    }
+    .linkbox input{
+        width: 65%;
+    }
+    /* _________statistics_________ */
+    .links div{
+        flex-direction: column;
+        gap: .4em;
+    }
+    .newLink{
+        border-top: var(--Dark-Violet) 1px solid;
+        padding-top: .4em;
+    }
+    .newLink button{
+        margin: 0;
+    }
+    .box-container{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        height: auto;
+        padding-top: 3em;
+    }
+    .boxes{
+        text-align: center;
+        width: 100%;
+
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+    .boxes > div{
+        left: 50%;
+        transform: translate(-50%);
+    }
+    /* ___________footer___________ */
+    footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 1em;
+        text-align: center;
+    }
+    footer svg{
+        grid-column: span 3;
+    }
+    .media{
+        grid-column: span 3;
+    }
+}
+
+@media(max-width: 664px){
+    /* ___________nav___________ */
+    nav > div{
+        display: none;
+        background: var(--Dark-Violet);
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding: 1.6em 1em;
+        border-radius: 1em;
+        position: absolute;
+        top: 4em;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    nav ul{
+        flex-direction: column;
+        padding-bottom: 1em;
+        border-bottom: var(--Ghost-white) 1px solid;
+        margin: 0 0 1em;
+    }
+    nav li{
+        color: var(--white);
+    }
+    nav a{
+        color: var(--white);
+        margin: 0;
+    }
+    nav button{
+        padding: .6em 1em;
+        border-radius: 1.6em;
+        margin: .6em 0 0;
+    }
+    .hamburger{
+        display: block;
+    }
+    #menu:checked ~ .menu .hamburger{
+        display: none;
+    }
+    #menu:checked ~ .menu .close{
+        display: block;
+    }
+    .open{
+        display: flex;
+    }
+    /* _________hero_________ */
+    .hero{
+        background-position: top 4em center;
+        background-size: 48vh;
+        padding: 20em 10% 8em;
+    }
+    .hero h1{
+        font-size: 40px;
+    }
+    .hero p{
+        font-size: 20px;
+        margin-top: 1em;
+    }
+    .hero > button{
+        font-size: 24px;
+        margin-top: .8em;
+    }
+    .linkbox{
+        flex-direction: column;
+        gap: 1em;
+        padding: 2.5%;
+    }
+    .linkbox input{
+        width: 100%;
+    }
+    /* _________statistics_________ */
+    .statistics-header{
+        width: 100%;
+    }
+    /* _________boost link_________ */
+    .boostLink button{
+        font-size: 20px;
+    }
+    /* ___________footer___________ */
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+}
